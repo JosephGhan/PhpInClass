@@ -57,7 +57,7 @@
 
         <label>Yearly Interest Rate:</label>
         <span><?php echo $yearly_rate_f; ?></span><br>
-
+        
         <label>Number of Years:</label>
         <span><?php echo $years; ?></span><br>
 
