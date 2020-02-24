@@ -1,0 +1,5 @@
+Shirt
+Shoes
+Sunglasses
+Jacket
+Pants
