@@ -1,9 +1,9 @@
 <?php
     session_start();
 
-    $action = filter_input(INPUT_GET, 'lo');
+    $action = filter_input(INPUT_POST, 'action');
     if (!$action){
-        $action = filter_input(INPUT_POST, 'action');
+        $action = filter_input(INPUT_GET, 'lo');
     }
     switch($action)
     {
