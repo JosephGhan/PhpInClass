@@ -14,7 +14,7 @@
         break;
         case 'Login':
             $txtname = filter_input(INPUT_POST, 'userName');
-
+            
             if ($txtname == "Joe")
             {
                 $_SESSION['user'] = "Joe";

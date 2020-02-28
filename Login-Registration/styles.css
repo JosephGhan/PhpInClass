@@ -1,0 +1,34 @@
+.jumbotron {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #141A46;
+    color: #EC8B5E;
+}
+
+input {
+    margin-top: 10px;
+}
+
+body {
+    background-color: #EC8B5E;
+}
+
+hr {
+    background-color: #EC8B5E;
+}
+
+#white {
+    color: white;
+}
+
+a {
+    color: #EC8B5E;
+}
+
+#left {
+    text-align: left;
+    color: white;
+}
