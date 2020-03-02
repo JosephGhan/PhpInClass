@@ -14,9 +14,12 @@
         <h3 class="lead">Please enter or register your username</h3>
         <?=$error ?>
         <form action="" method="post">
-            <input type="text" name="name" id=""><br>
-            <input type="submit" value="Login" name="login" id="">
-            <input type="submit" value="Register" name="login" id="">
+            <div class="form-group" id="formDiv">
+                <input class="form-control" type="text" name="name" id="" placeholder="Username"><br>
+                <input class="form-control" type="password" name="password" id="" placeholder="Password"><br>
+                <input class="btn btn-primary" type="submit" value="Login" name="login" id="">
+                <input class="btn btn-primary" type="submit" value="Register" name="login" id="">
+            </div>
         </form>
         <hr class="my-4">
         <h3>About Us</h3>

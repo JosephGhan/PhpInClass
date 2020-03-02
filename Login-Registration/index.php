@@ -6,18 +6,32 @@
         $action = filter_input(INPUT_GET, "lo");
     }
     $userName = filter_input(INPUT_POST, "name");
-    $names = file("names.txt");
-    $size = sizeof($names);
+    $password = filter_input(INPUT_POST, "password");
+    // $names = file("names.txt");
+    
     $error = "";
 
-    function searchFile($size, $userName, $names)
+    $file = fopen("names.txt", "rb");
+    while (!feof($file))
+    {
+        $names[] = explode(",", trim(fgets($file)));
+    }
+    // print_r($names[0][0]);
+    // print_r($names[0][1]);
+    $size = sizeof($names);
+
+
+    function searchFile($size, $userName, $names, $password)
     {
         //checks to see if entered name matches any in the text file
         for ($i = 0; $i < $size; $i++)
         {
-            if ($userName == trim($names[$i]))
+            if ($userName == $names[$i][0])
             {
-                return true;
+                if ($password == $names[$i][1])
+                {
+                    return true;
+                } 
             }
         }
     }
@@ -25,22 +39,22 @@
     switch($action)
     {
         case 'Login':
-            if (searchFile($size, $userName, $names))
+            if (searchFile($size, $userName, $names, $password))
             {
                 $_SESSION['user'] = $userName;
                 include "membersOnly.php";
             }
             else
             {
-                $error = "<p>User Not Found</p>";
+                $error = "<p>Username or Password Incorrect</p>";
                 include "login.php";
             }
         break;
 
         case 'Register':
-            if (searchFile($size, $userName, $names))
+            if (searchFile($size, $userName, $names, $password))
             {
-                $error = "<p>User already exists</p>";
+                $error = "<p>Username already exists</p>";
                 include "login.php";
             }
             else
@@ -52,7 +66,7 @@
                 //Rewrites file with updated contents
                 //file_put_contents("names.txt", $current);
                 $current = fopen("names.txt", "ab");
-                fwrite($current, "\n$userName");
+                fwrite($current, "\n$userName,$password");
                 fclose($current);
                 
                 $names = file("names.txt");
