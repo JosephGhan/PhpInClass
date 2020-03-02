@@ -22,10 +22,12 @@
             <hr class="my-4">
             <h4 id="white">Here is a list of our loyal members</h4>
             <?php
-                foreach ($names as $name)
-                {
-                    echo "<p id='white'>$name</p>";
-                }
+                // foreach ($names as $name)
+                // {
+                //     echo "<p id='white'>$name</p>";
+                // }
+                $quotes = array('"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela', '"Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma – which is living with the results of other peoples thinking." -Steve Jobs',
+                '"If you set your goals ridiculously high and its a failure, you will fail above everyone elses success." -James Cameron');
             ?>
             <hr class="my-4">
             <footer><a href="index.php?lo=logOut">Log Out</a></footer>
