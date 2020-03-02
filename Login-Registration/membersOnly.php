@@ -20,7 +20,7 @@
             <h1 class="display-4">Members Only</h1>
             <p class="lead">Where our members feel at home</p>
             <hr class="my-4">
-            <h4 id="white">Here is a list of our loyal members</h4>
+            <h4 id="white">Here is a quote from one of our famous members</h4>
             <?php
                 // foreach ($names as $name)
                 // {
@@ -28,6 +28,8 @@
                 // }
                 $quotes = array('"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela', '"Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma – which is living with the results of other peoples thinking." -Steve Jobs',
                 '"If you set your goals ridiculously high and its a failure, you will fail above everyone elses success." -James Cameron');
+                $num = rand(0, count($quotes) - 1);
+                echo "<p id='white'>$quotes[$num]</p>";
             ?>
             <hr class="my-4">
             <footer><a href="index.php?lo=logOut">Log Out</a></footer>

@@ -46,11 +46,15 @@
             else
             {
                 //Gets current file contents
-                $current = file_get_contents("names.txt");
+                //$current = file_get_contents("names.txt");
                 //Adds username to current contents
-                $current .= "\n$userName";
+                //$current .= "\n$userName";
                 //Rewrites file with updated contents
-                file_put_contents("names.txt", $current);
+                //file_put_contents("names.txt", $current);
+                $current = fopen("names.txt", "ab");
+                fwrite($current, "\n$userName");
+                fclose($current);
+                
                 $names = file("names.txt");
                 $_SESSION['user'] = $userName;
                 include "membersOnly.php";
