@@ -26,8 +26,14 @@
                 // {
                 //     echo "<p id='white'>$name</p>";
                 // }
-                $quotes = array('"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela', '"Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma – which is living with the results of other peoples thinking." -Steve Jobs',
-                '"If you set your goals ridiculously high and its a failure, you will fail above everyone elses success." -James Cameron');
+                $quotes = array('"The greatest glory in living lies not in never falling, but in rising every time we fall." -Nelson Mandela', 
+                '"Your time is limited, so dont waste it living someone elses life. Dont be trapped by dogma – which is living with the results of other peoples thinking." -Steve Jobs',
+                '"If you set your goals ridiculously high and its a failure, you will fail above everyone elses success." -James Cameron',
+                '"When you reach the end of your rope, tie a knot in it and hang on." -Franklin D. Roosevelt',
+                '"Always remember that you are absolutely unique. Just like everyone else." -Margaret Mead',
+                '"Tell me and I forget. Teach me and I remember. Involve me and I learn." -Benjamin Franklin',
+                '"It is during our darkest moments that we must focus to see the light." -Aristotle',
+                '"In the end, its not the years in your life that count. Its the life in your years." -Abraham Lincoln');
                 $num = rand(0, count($quotes) - 1);
                 echo "<p id='white'>$quotes[$num]</p>";
             ?>
