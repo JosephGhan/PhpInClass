@@ -1,0 +1,1 @@
+<footer><a href='?form="yes"'>Add a Product</a></footer>
