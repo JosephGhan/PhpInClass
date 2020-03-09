@@ -1,0 +1,1 @@
+<br><footer><a href='?form="yes"'>Add a Product</a> | <a href="index.php">Home</a></footer>
