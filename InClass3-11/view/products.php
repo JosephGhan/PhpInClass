@@ -14,7 +14,7 @@
 
         foreach ($aryProducts as $product)
         {
-            echo ("$product[0] $product[1] $product[2]<a href='.?action=del&id=$product[0]'>del</a> </br>");
+            echo ("$product[0] $product[1] $product[2] <a href='.?action=del&id=$product[0]'>del</a> | <a href='.?action=edit&id=$product[0]'>edit</a></br>");
         }
 
     ?>
