@@ -8,7 +8,7 @@
         //print_r($products);
         foreach($products as $product)
         {
-            echo("<a href='?id=$product[0]'>$product[0]</a> $product[1] $product[2]<br>");
+            echo("<a href='?id=$product[0]&action=viewProd'>$product[0]</a> $product[1] $product[2]<br>");
         }
         include "footer.php"
     ?>

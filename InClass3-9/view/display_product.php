@@ -11,7 +11,7 @@
     <p><?=$aryProduct[0] ?></p>
     <p><?="$$aryProduct[2]" ?></p>
     <br>
-    <a href='?form="update"&id=<?=$aryProduct[0]?>'>Update Product</a>
+    <a href='?action=update&id=<?=$aryProduct[0]?>'>Update Product</a>
     <?php
         include "footer.php" 
     ?>

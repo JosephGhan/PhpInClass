@@ -10,7 +10,7 @@
 ?>
 <body>
     <h1>Update a Product</h1>
-    <form method="post" action="index.php?update=true">
+    <form method="post" action="index.php?action=updateProd">
         <input disabled type="text" name="id" value=<?=$aryProduct[0]?> ><br>
         <input type="text" name="name" value=<?=$aryProduct[1]?>><br>
         <input type="text" name="price" value=<?=$aryProduct[2]?>><br><br>

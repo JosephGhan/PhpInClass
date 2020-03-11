@@ -50,5 +50,6 @@
         echo("here");
         global $db;
         $sql = "UPDATE `product` SET `name` = '$name', `price` = '$price' WHERE `product`.`id` = '$id'";
+        echo($sql);
         $query = mysqli_query($db, $sql);
     }
