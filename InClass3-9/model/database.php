@@ -37,19 +37,23 @@
         return($rs);
     }
 
-    function addProduct($id, $name, $price)
+    function addProduct()
     {
+        $id = filter_input(INPUT_POST, 'id');
+        $name = filter_input(INPUT_POST, 'name');
+        $price = filter_input(INPUT_POST, 'price');
         global $db;
         $sql = "INSERT INTO `product` (`id`, `name`, `price`) VALUES ('$id', '$name', '$price')";
         $query = mysqli_query($db, $sql);
         
     }
 
-    function updateProduct($id, $name, $price)
+    function updateProduct()
     {
-        echo("here");
         global $db;
-        $sql = "UPDATE `product` SET `name` = '$name', `price` = '$price' WHERE `product`.`id` = '$id'";
-        echo($sql);
-        $query = mysqli_query($db, $sql);
+        $id = filter_input(INPUT_POST, 'id');
+        $name = filter_input(INPUT_POST, 'name');
+        $price = filter_input(INPUT_POST, 'price');
+        $sql = "UPDATE `product` SET `name` = '$name', `price` = '$price' WHERE id = '$id'";
+        $qry = mysqli_query($db, $sql);
     }

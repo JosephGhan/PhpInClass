@@ -1,1 +1,1 @@
-<br><footer><a href='?action="addProd"'>Add a Product</a> | <a href="index.php">Home</a></footer>
+<br><footer><a href='index.php?action="addForm"'>Add a Product</a> | <a href="index.php">Home</a></footer>

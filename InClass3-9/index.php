@@ -2,39 +2,41 @@
     include "model/database.php";
     
     $id = filter_input(INPUT_GET, 'id');
-    // $addProd = filter_input(INPUT_GET, 'form');
-    // $update = filter_input(INPUT_GET, 'update');
-    $action = filter_input(INPUT_GET, 'action');
+    $addProd = filter_input(INPUT_GET, 'form');
+    $update = filter_input(INPUT_GET, 'update');
+    $action = filter_input(INPUT_POST, 'action');
+    if (!$action)
+    {
+        $action = filter_input(INPUT_GET, 'action');
+    }
 
     switch($action)
     {
+        case 'addForm':
+            echo("display form");
+            include "./view/display_addForm.php";
+            break;
         case 'viewProd':
-            include "view/display_product.php";
+            include "./view/display_product.php";
             break;
         case 'addProd':
-            $id = filter_input(INPUT_POST, 'id');
-            $name = filter_input(INPUT_POST, 'name');
-            $price = filter_input(INPUT_POST, 'price');
-            addProduct($id, $name, $price);
+            addProduct();
             header("Location: index.php");
             echo("here add");
             break;
-        case 'updateProd':
-            $id = filter_input(INPUT_POST, 'id');
-            $name = filter_input(INPUT_POST, 'name');
-            $price = filter_input(INPUT_POST, 'price');
-            updateProduct($id, $name, $price);
+        case 'update':
+            updateProduct();
             header("Location: index.php");
             echo("here");
             break;
-        case 'update':
-            include "view/display_updateForm.php";
-            break;
-        case 'addProd':
-            include "view/display_addForm.php";
+        case 'updateProd':
+            $product = getAProduct($id);
+            include "./view/display_updateForm.php";
             break;
         default:
-            include "view/display_products.php";
+            echo("default");
+            include "./view/display_products.php";
+            break;
     }
 
 

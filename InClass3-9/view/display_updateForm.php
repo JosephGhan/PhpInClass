@@ -5,16 +5,16 @@
     //echo("hi".$id);
     //echo($product);
     //echo("hi"); 
-    $aryProduct = getAProduct($id);
+    //$aryProduct = getAProduct($id);
     //echo($aryProduct);
 ?>
 <body>
     <h1>Update a Product</h1>
-    <form method="post" action="index.php?action=updateProd">
-        <input disabled type="text" name="id" value=<?=$aryProduct[0]?> ><br>
-        <input type="text" name="name" value=<?=$aryProduct[1]?>><br>
-        <input type="text" name="price" value=<?=$aryProduct[2]?>><br><br>
-        <input type="submit" value="Update Product">
+    <form action="" method="post">
+        <input type="hidden" name="id" value="<?=$product[0]?>" >
+        <input type="text" name="name" value="<?=$product[1]?>" ><br><br>
+        <input type="text" name="price" value="<?=$product[2]?>" ><br><br>
+        <input type="submit" name="action" value="update">
     </form>
     <?php
         // if (isset($_POST['id']))
