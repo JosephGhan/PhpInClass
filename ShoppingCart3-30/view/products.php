@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+</head>
+<body>
+    
+    <?php
+        $prodAry = getAll();
+
+        foreach($prodAry as $product)
+        {
+            echo("<p>$product[0]  $$product[1]</p>");
+        }
+    ?>
+</body>
+</html>
