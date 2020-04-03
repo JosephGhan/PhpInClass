@@ -1,9 +1,3 @@
-<?php
-    if(!isset($_SESSION['user']))
-    {
-        header("Location:index.php");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +11,7 @@
         setlocale(LC_MONETARY,"en_US");
 
         $date = date("m-d-y", strtotime($orderInfo[0]));
-        echo("<p><strong>Order Date:</strong> $date</p>");
+        echo("<p id='orderDetail'><strong>Order Date:</strong> $date</p>");
         echo("<p><strong>Customer Name:</strong> $orderInfo[1] $orderInfo[2]</p>");
         echo("<p><strong>Address:</strong><br>$orderInfo[3]<br>$orderInfo[4], $orderInfo[5] $orderInfo[6]</p>");
 
@@ -31,7 +25,10 @@
             $item[2] = number_format($item[2], 2,'.', ',');
             echo("<tr><td>$item[0]</td><td>$item[1]</td><td>$ $item[2]</td><td>$ $total</td></tr>");
         }
-        echo("</table><br><br><a href='admin.php'>Return to Home</a>");
+        echo("</table><br><br><a href='javascript:history.go(-1)'>Return to Home</a>");
     ?>
+    <br>
+    <br>
+    <footer>&copy; Joseph Ghan 2020</footer>
 </body>
 </html>
