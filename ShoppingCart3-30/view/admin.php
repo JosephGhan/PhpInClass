@@ -82,6 +82,7 @@
         </form>
     <br>
     <br>
-    <footer>&copy; Joseph Ghan 2020 <a href="index.php">Return to customer view</a></footer>
+    <a href="?action=LogOut">Log Out</a>
+    <footer>&copy; Joseph Ghan 2020 <a href="?action=LogOut">Return to customer view</a></footer>
 </body>
 </html>
