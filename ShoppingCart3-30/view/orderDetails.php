@@ -25,7 +25,7 @@
             $item[2] = number_format($item[2], 2,'.', ',');
             echo("<tr><td>$item[0]</td><td>$item[1]</td><td>$ $item[2]</td><td>$ $total</td></tr>");
         }
-        echo("</table><br><br><a href='javascript:history.go(-1)'>Return to Home</a>");
+        echo("</table><br><br><a href='index.php?action=goBack'>Return to Home</a>");
     ?>
     <br>
     <br>

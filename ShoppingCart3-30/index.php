@@ -77,6 +77,9 @@
             deleteProduct($productID);
             include "./view/admin.php";
         break;
+        case "goBack":
+            include "./view/admin.php";
+        break;
         case "LogOut":
             //Destroys session
             session_destroy();
