@@ -1,0 +1,47 @@
+body {
+    width: 40%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ECEBE4;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.card-body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.card {
+    margin-top: 10px;
+    background-color: #ECEBE4;
+    border-color: #ECEBE4;
+}
+
+button {
+    display: block;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #1C1C1C !important;
+    border-color: #1C1C1C;
+    color: #ECEBE4;
+}
+
+.btn-primary:hover {
+    border-color: #C7EFCF;
+    color: #EEF0F2;
+}

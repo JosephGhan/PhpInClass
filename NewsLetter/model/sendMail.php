@@ -15,7 +15,7 @@
         $mail->Password = "Stitch!01";
 
         //compose email
-        $mail->setFrom("808.markley@gmail.com", "");
+        $mail->setFrom("808.markley@gmail.com", "SignUp");
         $mail->addAddress("$email", "$name");
         $mail->addReplyTo("808.markley@gmail.com", "Someone Else");
 
