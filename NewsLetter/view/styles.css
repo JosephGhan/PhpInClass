@@ -8,3 +8,8 @@ body {
 input {
     margin-bottom: 10px;
 }
+
+div {
+    width: 40%;
+    display: block;
+}
