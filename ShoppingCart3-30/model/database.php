@@ -1,6 +1,6 @@
 <?php
 
-$username = 'class';
+    $username = 'class';
     $password = 'cis239';
     $host = 'localhost';
     $db_name = 'guitar_shop';
@@ -8,19 +8,29 @@ $username = 'class';
     try
     {
         $db = new mysqli($host, $username, $password, $db_name);
+        //echo("Connected");
     }
     catch (Exception $ex)
     {
         error_log($ex->getMessage());
+        //echo(error_log($ex->getMessage()));
         exit('Error connecting to the database');
+
     }
 
     function getAll()
     {
         global $db;
         $sql = 'SELECT productName, listPrice FROM products WHERE active = 1';
-        $qry = mysqli_query($db, $sql);
-        $rs = mysqli_fetch_all($qry);
+        //echo($sql);
+        try{
+            $qry = mysqli_query($db, $sql);
+            $rs = mysqli_fetch_all($qry);
+        }
+        catch (Exception $ex){
+            echo(error_log($ex->getMessage()));
+        }
+        //print_r($rs);
         return $rs;
     }
 
